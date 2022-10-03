@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Management</title>
+</head>
+<link href='https://fonts.googleapis.com/css?family=Baloo Bhai' rel='stylesheet'>
+<link rel="stylesheet" href="css/style.css">
+<style>
+    /* CSS Reset  */
+    body{
+        font-family: 'Baloo Bhai';
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        background: url("https://images8.alphacoders.com/454/454579.jpg");
+    }
+    .left{
+        display: inline;
+        /* border: 2px solid red; */
+        position: absolute;
+        left: 5px;
+        top: 9px;
+    }
+    .left img{
+        width: 136px;
+        filter: invert(100%);
+    }
+    .left div{
+        text-align: center;
+    }
+    .mid{
+        display: block;
+        width: 33%;
+        margin: 20px auto;
+        /* border: 2px solid green; */
+    }
+    .right{
+        position: absolute;
+        right: 20px;
+        top: 23px;
+        display: inline-block;
+        /* border: 2px solid yellow; */
+    }
+    .navbar{
+        display: inline-block;
+
+    }
+    .navbar li{
+        display: inline-block;
+        font-size: 12px;
+    }
+    .navbar li a{
+        color: white;
+        text-decoration: none;
+        padding: 24px 14px;
+    }
+    .navbar li a:hover, .navbar li a.active{
+      text-decoration: underline;
+      color: grey;
+    }
+    .btn{
+        font-family: 'Baloo Bhai';
+        margin: 0px 9px;
+        color: white;
+        background-color: black;
+        padding: 4px 14px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: rgb(31, 30, 30);
+    }
+    .container{
+    border: 2px solid white;
+    margin: 150px 35px;
+    padding: 19px;
+    width: 40%;
+    border-radius: 25px;
+    }
+    .container h1{
+        text-align: center;
+    }
+    .form-group input{
+    text-align: center;
+    display: block;
+    width: 300px;
+    padding: 5px;
+    border: 2px solid black;
+    margin: 10px auto;
+    font-size: 15px;
+    border-radius: 8px;
+    font-family: baloo Bhai;
+    }
+    .container button{
+    display: block;
+    width:20% ;
+    margin:20px auto;
+    }
+    .recovery{
+        font-family: 'Baloo Bhai';
+        margin: 50px 50px;
+        color: rgb(255, 247, 0);
+        /* background-color: black; */
+        padding: 4px 14px;
+        /* border: 2px solid rgb(128, 128, 128); */
+        border-radius: 10px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+</style>
+<body>
+    <header class="header">
+        <!-- Left box for logo -->
+        <div class="left">
+         <div class="left">
+             <img src="https://i.pinimg.com/236x/dd/de/21/ddde218ad201bc7092f22b168c287999.jpg" alt="">
+             <div>Tree Management</div>
+         </div>
+        </div>
+
+        <!-- mid box for navbar -->
+        <div class="mid">
+            <ul class="navbar">
+                <!-- <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contact Us</a></li> -->
+            </ul>
+        </div>
+
+        <!-- Right box for buttons -->
+        <div class="right">
+            <button class="btn">Call Us</button>  <!-- <button class="btn">Email Us</button> -->
+        </div>
+    </header>
+    <div class="container">
+        <h1>Tree Management System</h1>
+        <form action="notation php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Email">
+                <input type="text" name="" placeholder="Password">
+                <!-- <input type="text" name="" placeholder="Enter your Gender">
+                <input type="text" name="" placeholder="Enter your Locality">
+                <input type="text" name="" placeholder="Enter your Email">
+                <input type="text" name="" placeholder="Enter your Mobile Number"> -->
+            </div>
+            <button class="btn">submit</button>
+            <a href="https://www.facebook.com/" target="_blank" class="recovery">Recovery Email</a>
+            <a href="" target="_blank" class="recovery">Setup Password</a>
+        </form>
+    </div>
+</body>
+</html>

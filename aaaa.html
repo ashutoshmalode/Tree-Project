@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>
+            Profile Form Using local storage js-part5
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      </head>
+      <body>
+
+        <h1 class="text-info text-center">Profile</h1>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="col-sm-6">
+                        <img id="imagePreview" alt="dcdfgfdgdggffd">
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <h3 class="text-warning">
+                                Image Upload
+                            </h3>
+                            <input type="file" id="image" name="filename">
+                        </div>
+                        <div class="row">
+                            <h3 class="text-warning">
+                                Description
+                            </h3>
+                            <textarea id="des"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <button class="btn btn-danger" onclick="saveProfile()">Submit</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            let imageUrl;
+            document.querySelector('#image').addEventListener('change', function(){
+                    const reader = new FileReader();
+                    reader.addEventListener('load', () => {
+                        imageUrl = reader.result; 
+                    });
+                    reader.readAsDataURL(this.files[0]);
+                });
+            function saveProfile()
+            {
+                var des=document.getElementById('des').value;
+
+                let profile={
+                    description:des , 
+                    image: imageUrl
+                }
+                console.log(profile)
+                localStorage.setItem("profile_data",JSON.stringify(profile))
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const recentImage = localStorage.getItem('profile_data');
+
+                if(recentImage){
+                    document.querySelector('#imagePreview').setAttribute("src", recentImage);
+                }
+            })
+        </script>
+      </body>
